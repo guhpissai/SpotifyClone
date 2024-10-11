@@ -12,6 +12,12 @@ export class LoginComponent {
   constructor(private spotifyService: SpotifyService) {}
 
   ngOnInit(): void {
+    this.validateTokenUrlCallBack();
+  }
+
+  validateTokenUrlCallBack() {
+    const token = this.spotifyService.getTokenUrlCallBack();
+    console.log(token)
   }
 
   handleLogin() {
